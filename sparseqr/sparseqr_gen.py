@@ -16,7 +16,8 @@ ffibuilder.set_source( "sparseqr._sparseqr",
     ## You may need to modify the following line,
     ## which is needed on Ubuntu and harmless on Mac OS.
     include_dirs = [ '/usr/include/suitesparse' ],
-    libraries=['spqr'])
+    libraries=['amd','btf','camd','ccolamd','cholmod','colamd','cxsparse'
+'klu','lapack','ldl','lumfpack','metis','suitesparseconfig','spqr','libblas'])
 
 ffibuilder.cdef("""
 // The int... is a magic thing which tells the compiler to figure out what the right
